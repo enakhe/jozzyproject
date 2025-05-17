@@ -22,8 +22,8 @@ app.get('/ready', (req, res) => {
 });
 
 app.use('/api', emailRoutes);
-app.use('api', paymentRoutes);
-app.use('api', retrieveStripe);
+app.use('/api', paymentRoutes);
+app.use('/api', retrieveStripe);
 
 app.listen(port, () => {
     console.log(`🚀 Server running on http://localhost:${port}`);
