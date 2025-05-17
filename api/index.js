@@ -5,9 +5,9 @@ import express, { json, urlencoded } from 'express';
 import cors from 'cors';
 import serverless from 'serverless-http';
 
-import emailRoutes from './routes/emailConfig.js';
-import paymentRoutes from './routes/stripePayment.js';
-import retrieveStripe from './routes/retrieveStripe.js';
+import emailRoutes from '../routes/emailConfig.js';
+import paymentRoutes from '../routes/stripePayment.js';
+import retrieveStripe from '../routes/retrieveStripe.js';
 
 const app = express();
 const port = 5100;

@@ -2,9 +2,10 @@ import dotenv from 'dotenv';
 dotenv.config();
 
 import { Router } from 'express';
+import Stripe from 'stripe';
 const router = Router();
 
-const stripe = require('stripe')(process.env.stripe_secret);
+const stripe = new Stripe(process.env.stripe_secret);
 
 router.post('/create-checkout-session', async (req, res) => {
 	const { product } = req.body;
